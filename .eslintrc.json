@@ -1,0 +1,14 @@
+{
+    "extends": [
+        "airbnb-base/legacy"
+    ],
+    "rules": {
+        "func-names": 0,
+        "no-plusplus": 0
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true
+    }
+}
