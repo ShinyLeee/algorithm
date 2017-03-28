@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /**
  * 冒泡排序 - Bubble-Sort
  *
@@ -8,11 +7,11 @@ function bubbleSort(arr) {
   var i;
   var j;
   var temp;
-  var sArr; // shallow copy an array
+  var sArr;
   if (Object.prototype.toString.call(arr) !== '[object Array]') {
-    throw new Error('You can only pass Array as parameter');
+    throw new TypeError('You can only pass Array as parameter');
   }
-  sArr = arr.slice();
+  sArr = arr.slice(); // shallow copy value of array
   for (i = 0; i < sArr.length; i++) {
     for (j = 0; j < sArr.length - i - 1; j++) {
       if (sArr[j] > sArr[j + 1]) {

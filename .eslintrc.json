@@ -4,7 +4,8 @@
     ],
     "rules": {
         "func-names": 0,
-        "no-plusplus": 0
+        "no-plusplus": 0,
+        "vars-on-top": 0
     },
     "env": {
         "browser": true,

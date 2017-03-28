@@ -2,6 +2,8 @@ var expect = require('chai').expect;
 var bubbleSort = require('../algorithm/sort/bubbleSort.js');
 var selectionSort = require('../algorithm/sort/selectionSort.js');
 var insertionSort = require('../algorithm/sort/insertionSort.js');
+var quickSort = require('../algorithm/sort/quickSort.js');
+var binarySearch = require('../algorithm/binarySearch/index.js');
 var dedupe = require('../algorithm/dedupe/index.js');
 
 describe('Algorithm', function () {
@@ -41,6 +43,32 @@ describe('Algorithm', function () {
         var original = before.slice();
         insertionSort(before);
         expect(original).to.eql(before);
+      });
+    });
+
+    describe('quickSort()', function () {
+      it('should sort well', function () {
+        expect(quickSort(before)).to.eql(after);
+      });
+    });
+  });
+
+  describe('binarySearch()', function () {
+    var sortedArr = [-15, -3, 2, 5, 6, 9, 10, 10, 20, 99, 104, 999, 1023];
+    var existValue = 99;
+    var inexistValue = 100;
+    describe('recursive', function () {
+      it('should give find result correctly', function () {
+        var recursive = binarySearch.recursive;
+        expect(recursive(sortedArr, existValue)).to.be.true; // eslint-disable-line
+        expect(recursive(sortedArr, inexistValue)).to.be.false; // eslint-disable-line
+      });
+    });
+    describe('plain', function () {
+      it('should give find result correctly', function () {
+        var plain = binarySearch.plain;
+        expect(plain(sortedArr, existValue)).to.be.true; // eslint-disable-line
+        expect(plain(sortedArr, inexistValue)).to.be.false; // eslint-disable-line
       });
     });
   });

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /**
  * 选择排序 - Selection Sort
  *
@@ -11,9 +10,9 @@ function selectionSort(arr) {
   var temp;
   var sArr;
   if (Object.prototype.toString.call(arr) !== '[object Array]') {
-    throw new Error('You can only pass Array as parameter');
+    throw new TypeError('You can only pass Array as parameter');
   }
-  sArr = arr.slice(); // shallow copy an array
+  sArr = arr.slice(); // shallow copy value of array
   for (i = 0; i < sArr.length - 1; i++) {
     min = i;
     for (j = i + 1; j < sArr.length; j++) {
