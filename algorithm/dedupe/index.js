@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 /**
- * create a duplicate-free version of the array
+ * @description Create a duplicate-free version of the array
  *
  * @param {Array}   arr  - random array
  * @param {Boolean} sort - should sort the result
